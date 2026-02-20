@@ -10,6 +10,15 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary: #06bcf9;
+  --color-primary-dim: rgba(6, 188, 249, 0.1);
+  --color-accent-lime: #a3e635;
+  --color-accent-amber: #f59e0b;
+  --color-background-light: #f5f8f8;
+  --color-background-dark: #0f1214;
+  --color-surface-dark: #181c20;
+  --color-surface-darker: #121518;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +29,39 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-space);
+}
+
+.scanlines-overlay {
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+.glitch-text:hover {
+  text-shadow: 2px 0 #06bcf9, -2px 0 #f59e0b;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1214;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f353a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06bcf9;
+}
+
+.clip-corner {
+  clip-path: polygon(0 0,
+      100% 0,
+      100% calc(100% - 10px),
+      calc(100% - 10px) 100%,
+      0 100%);
 }

@@ -2,64 +2,739 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col overflow-x-hidden relative">
+        
+        <div className="fixed inset-0 z-0 bg-hex-pattern pointer-events-none opacity-50" />
+        <div className="fixed inset-0 z-0 scanlines-overlay bg-scanlines opacity-10 pointer-events-none" />
+        
+        <div className="fixed top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-primary z-50 pointer-events-none" />
+        <div className="fixed top-0 right-0 w-8 h-8 border-r-2 border-t-2 border-primary z-50 pointer-events-none" />
+        <div className="fixed bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-primary z-50 pointer-events-none" />
+        <div className="fixed bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-primary z-50 pointer-events-none" />
+        
+        <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-surface-dark/80 border-b border-white/5">
+          <div className="flex items-center justify-between px-6 py-3 max-w-[1600px] mx-auto">
+            
+            <div className="flex items-center gap-4">
+              <div className="size-8 text-primary animate-pulse">
+                <span className="material-symbols-outlined text-[32px]">hub</span>
+              </div>
+              <div>
+                <h2 className="text-white text-lg font-bold leading-tight tracking-[0.1em]">
+                  RHODES ARCHIVE
+                </h2>
+                <p className="text-[10px] text-primary/60 font-mono tracking-widest">
+                  TERMINAL_01 // CONNECTED
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-6">
+              
+              <div className="hidden md:flex gap-4">
+                <div className="flex items-center gap-2 px-3 py-1 rounded bg-surface-darker border border-white/5">
+                  <span className="material-symbols-outlined text-accent-lime text-[16px]">
+                    bolt
+                  </span>
+                  <span className="text-xs font-bold text-white tracking-widest">
+                    135/135
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 px-3 py-1 rounded bg-surface-darker border border-white/5">
+                  <span className="material-symbols-outlined text-accent-amber text-[16px]">
+                    monetization_on
+                  </span>
+                  <span className="text-xs font-bold text-white tracking-widest">
+                    540,200
+                  </span>
+                </div>
+              </div>
+              
+              <div className="flex gap-2">
+                <button className="flex items-center justify-center size-9 rounded hover:bg-white/10 text-white transition-colors group relative">
+                  <span className="material-symbols-outlined">notifications</span>
+                  <span className="absolute top-2 right-2 size-2 bg-accent-amber rounded-full animate-ping" />
+                  <span className="absolute top-2 right-2 size-2 bg-accent-amber rounded-full" />
+                </button>
+                <button className="flex items-center justify-center size-9 rounded hover:bg-white/10 text-white transition-colors">
+                  <span className="material-symbols-outlined">settings</span>
+                </button>
+                <div className="ml-2 size-9 rounded overflow-hidden border border-white/10">
+                  <img
+                    alt="User avatar profile picture"
+                    className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC654MgGK0G609g7g2NyQ_eKVdVWMrGrFVdCEYcjkSkD2jQ3YMtmyJTXYLO5pFihCpX5cEH4SqT935EsloUWd1AtUOS0lHg4To7XSGs0TQnj0TkAEBaADKiVRz7AiiZk8US713ZpjXET_Vgz-unOpPiDZf2Zq78yVe8nq7r5uYtKqG_MZ1dur7JSSAsyPgk4FpQdzTdUeUTxT2WuvyBp4EBc-JLAbXH7W7yBF5DF79bUfJ1a-9vUlMHHzQUOSp5ygylOtcjqH8i6Yk"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <main className="flex-1 flex justify-center w-full z-10 px-4 py-8">
+          <div className="w-full max-w-[1400px] flex flex-col gap-6">
+            
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-l-4 border-primary pl-4 py-1">
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight glitch-text cursor-default">
+                  OPERATOR DIRECTORY
+                </h1>
+                <p className="text-slate-400 mt-1 font-mono text-sm tracking-wider">
+            {`// PERSONNEL DATABASE ACCESS LEVEL 3`}
+                </p>
+              </div>
+              <div className="flex gap-2 font-mono text-xs text-primary/50">
+                <span>SYS.VER.4.0.2</span>
+                <span>::</span>
+                <span>PING 14ms</span>
+              </div>
+            </div>
+            
+            <section className="bg-surface-dark border border-white/5 rounded-lg p-1 shadow-lg relative overflow-hidden group">
+              
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/10 to-transparent pointer-events-none"></div>
+              <div className="flex flex-col xl:flex-row gap-1">
+                
+                <div className="relative flex-1 min-w-[300px] group/search">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-500 group-focus-within/search:text-primary transition-colors">
+                    <span className="material-symbols-outlined">search</span>
+                  </div>
+                  <input
+                    className="w-full h-14 bg-surface-darker text-white pl-12 pr-4 border-none focus:ring-1 focus:ring-primary placeholder:text-slate-600 font-mono text-sm transition-all"
+                    placeholder="SEARCH DATABASE [CODENAME_OR_ID]..."
+                    type="text"
+                  />
+                  <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-focus-within/search:w-full transition-all duration-500"></div>
+                </div>
+                
+                <div className="flex flex-wrap items-center gap-1 bg-surface-darker p-2 xl:px-4 overflow-x-auto scrollbar-hide">
+                  <span className="text-[10px] font-bold text-slate-500 mr-2 tracking-widest hidden md:block">
+                    CLASS //
+                  </span>
+                  <button className="h-10 px-3 flex items-center gap-2 bg-primary/20 text-primary border border-primary/30 rounded hover:bg-primary hover:text-white transition-all">
+                    <span className="material-symbols-outlined text-[18px]">
+                      grid_view
+                    </span>
+                    <span className="text-xs font-bold">ALL</span>
+                  </button>
+                  <button
+                    className="h-10 w-10 flex items-center justify-center bg-surface-dark hover:bg-white/5 text-slate-400 hover:text-white rounded transition-colors group"
+                    title="Vanguard"
+                  >
+                    <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">
+                      shield_moon
+                    </span>
+                  </button>
+                  <button
+                    className="h-10 w-10 flex items-center justify-center bg-surface-dark hover:bg-white/5 text-slate-400 hover:text-white rounded transition-colors group"
+                    title="Guard"
+                  >
+                    <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">
+                      swords
+                    </span>
+                  </button>
+                  <button
+                    className="h-10 w-10 flex items-center justify-center bg-surface-dark hover:bg-white/5 text-slate-400 hover:text-white rounded transition-colors group"
+                    title="Defender"
+                  >
+                    <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">
+                      security
+                    </span>
+                  </button>
+                  <button
+                    className="h-10 w-10 flex items-center justify-center bg-surface-dark hover:bg-white/5 text-slate-400 hover:text-white rounded transition-colors group"
+                    title="Sniper"
+                  >
+                    <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">
+                      match_word
+                    </span>
+                  </button>
+                  <button
+                    className="h-10 w-10 flex items-center justify-center bg-surface-dark hover:bg-white/5 text-slate-400 hover:text-white rounded transition-colors group"
+                    title="Caster"
+                  >
+                    <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">
+                      flare
+                    </span>
+                  </button>
+                  <button
+                    className="h-10 w-10 flex items-center justify-center bg-surface-dark hover:bg-white/5 text-slate-400 hover:text-white rounded transition-colors group"
+                    title="Medic"
+                  >
+                    <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">
+                      medical_services
+                    </span>
+                  </button>
+                  <button
+                    className="h-10 w-10 flex items-center justify-center bg-surface-dark hover:bg-white/5 text-slate-400 hover:text-white rounded transition-colors group"
+                    title="Supporter"
+                  >
+                    <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">
+                      stars
+                    </span>
+                  </button>
+                  <button
+                    className="h-10 w-10 flex items-center justify-center bg-surface-dark hover:bg-white/5 text-slate-400 hover:text-white rounded transition-colors group"
+                    title="Specialist"
+                  >
+                    <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">
+                      build
+                    </span>
+                  </button>
+                </div>
+                
+                <div className="flex items-center gap-1 bg-surface-darker p-2 xl:px-4">
+                  <span className="text-[10px] font-bold text-slate-500 mr-2 tracking-widest hidden md:block">
+                    RARITY //
+                  </span>
+                  <div className="flex bg-surface-dark rounded p-1 gap-1">
+                    <button className="px-3 h-8 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/10 rounded transition-colors">
+                      1-3
+                    </button>
+                    <button className="px-3 h-8 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/10 rounded transition-colors">
+                      4
+                    </button>
+                    <button className="px-3 h-8 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/10 rounded transition-colors">
+                      5
+                    </button>
+                    <button className="px-3 h-8 text-xs font-bold bg-accent-amber text-black rounded shadow-[0_0_10px_rgba(245,158,11,0.4)]">
+                      6
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <div className="absolute inset-0 bg-primary mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                  <img
+                    alt="Portrait of a male operator with stern expression"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBify3cdPMK_3osuBrJcCbtMZtH_6udkZC-aud9_i3xYwtWv-quaVTsYcri-bks2gEwvfeGqifrfVcKwYTXIF2v2sYXCBgb-jUmiV624IY8crQK3eGVjl_fN-1FLuLnVs9ppJ_vZ7J7ctz-x6hWy20rkJKIzmycB7Czqx11RxymCX4L45q2D_9c5He3TqH-rPZfjYI3aJy7qkCOiQRieQYF2iJ4IED1QdwWk68wZHo_vXrqwCVmxPkNagJV4rUkN05d0BLrvjErBY0"
+                  />
+                  
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      swords
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #SA01
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    SilverAsh
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a female operator with red hair"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB01jx8jRlGwtYR2X_vJHtFXqo2eIUGLi1yb41MdYmGcC1oV6dLwM5SD2ybAA5tNN_f9sdf9CDeiww7EjyzKx5xnsNOss6ARgZ5e1sxJ8dNA4KER5afRDGw55zSrQ4J3dft1x2L7Q664WBrzFsbHzXueIt1GOCIjpq-JsvHMgVsQ4iyjRH5A7snr1Yhrj3KVFP15jULwomxePfKpOcagrILpf24v8B64WOjei4trZZ2aFFnqpD9tzAi2I250VlJUGRyp5vx9S0JxLg"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      match_word
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #EX02
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    Exusiai
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a female operator looking determined"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAILJLHbU-JXqt9K9LLf7NQlFpVstXfNUf2k7yxqUaacDB7ujyKVLWzYFiNFCPtzygdYMnVzrLe4Z3KP__2IIOjWShzgJCdIrpUR92Pj_C0T5vniJvFG7IIfUJqU3x9QGvzJ8e249k3hCEqJ_HG7iDU_wfJ46QJXXVVH2J1EDgPHu5zSW3NyR2eXD8LWbEVGwPe--l2KnvoFzNnOc3Jw0VOKmToofDEyXQM1U9LWuW8hZNXbbN9xBXwUYGdqCNIS9DqPy4oCBHNbbQ"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      flare
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #AM00
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    Amiya
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a female operator with cold expression"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL2tXDTsTZwvLs8Omqb5mtCpRaB8FFq-R-xlbKjJD4oFQWxUnnInlBHzZsC-6eJGEOHdRWmK2ytVJAfDZ8GZ2gV3V35OkB1y264DXLRW6qMcMiozNWtpA2g2Qe82j0vLaIKu8yMgRPqOwi6Oedy2aQwWoqe-Moxnyv5lmrIvubHAK6LYkbM7NdYdhybpG2cIAkl4S6vUzV8Lv7qpCMQTuS49k1O9Yn2v9fAT1qrqlx3SdOoZy3COHLkuj5J7JV_zZE36_gD14YCis"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      medical_services
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #KL03
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    {`Kal'tsit`}
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a female operator with protective gear"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1iwrOOLlCZJym5i1f00DvJWn9E0SzxeaZEglnJbqiaBXFOusa_YS5pYFpWNvDmsmZ0V9CSTTvAjG3ZdsO8Z97AShL5QhMC5TFWRV5N7u659BF_dPFIkC6iSoyVkdrE29OEMAzgzhk-bMCGiX6XuGJgUDBHVNEbf2F4n5ZS7ZnDdmc9otYGliIG3zUTZ4bzUaGzvL5A9NUGsjlx4DdMXv4O9PG0R7s75SSSsbniDwG64HUJo98SF9sbbn0yyJ91we52xZMdkcZkAs"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      security
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #SR05
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    Saria
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a cheerful male operator"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-kw7ICedxKe4Fhj23MlDZyDDzY0LNvzP60fRm-wVm44GcEPrBuBTF2JI76RfuVoDk86A_YCjHb0B1OCy0bUbYZR1el1ebnDBoQgzhcX2dqMJFEq-cCrNx_k3QZrstKgU58ruHdUrDZO9Yemj3B-o4cPotuUQKBMF3TQSEuaiquAxLiCnbh0tznpYPnwQVHKfKb8ez5w1RrGNsLgRAeF_iJBiNC-xb0iHqRv4rn0Mp37dFdH0qf-HKw8WRqvp99jiKGmMs_3e5Q5s"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      shield_moon
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #MY11
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    Myrtle
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a female operator with fierce eyes"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTh6Hm7bqVNcBd1vlRACuU2bFKhQC2olrr9xSFW82yuWimh6eTvUPlXEdxQQy3_h-JDflos8uMQZxvN96xXsElKyi2CijIxYKs2CQuGYkqNavCLTUgvVHOVbUJAPCvds-pAeeBY5HcAsleRpIuCMLPtLZd7onTJH0SE3V7eCC4LZyKqajqaT8DdJf8h2C8f6beZGWLDoEnJGrg7e-OeTKa-BI6an5ktTsdGY22ISh2rlIOH8bTnw0IDHVP28UvRmdkWvBbhHU8Dpo"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      swords
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #BL09
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    Blaze
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a male operator looking calm"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFqCsFQIpUF13U0IDkvQzlMHLwyGrwOcWiSl9pu_DUgMsFFeJry7rXVjAwn_9ePMtg51pIGsYAewlHQktJSv4i_91TysiavxkVfOsBrLpOvIfDhS6Mxo4F9WZAQ80_mmXRESx-afWA4nFVPYHUMFzKZOwXp7uYrCiYmP_H-QeUl-Krie17gG1O4HVmm_VmFiVFkVFYZJaIxdXjcLXJUpcZklZsTCo3I9JoiCu27iO2w0465N89cNnVXfCw9K7mK9b3rUhuDDbbUts"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      swords
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #TH14
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    Thorns
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a female operator with mysterious aura"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn745bv4MKl9vaxh3UxbfXhipJTM-jBmjXjX7lroarkxfdfeSsnCalpnV3ursCfEkTAbmAVpB6zKlMGGtxVrbNOul5FkJV5v4tfEkUfFYJp_eCpViXvqHWLGIPRM57sV8qUcJ-neHZj3S-WRjHRQWSYhFtNlgZvLiWlANi7BPHy_1YuwDQyA5EnZK8d8J8j4uNLkhZYiG5mDm9iHUJv8-oI3_7HU5M8gNCUJO3DXkamD_i9By9O0qJ4foIWiNbrunw-sBWa-a1PpI"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      swords
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #SU21
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    Surtr
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
+                <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                  <img
+                    alt="Portrait of a large male operator"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0j0xvOTt7L0vOXSzGQSGBYvYYs1uXCLxd_E1KSMPA-7bpkbIlE65CyYQzMzKFccOKr7jb_5CXPFdgvu9zGCAIvzc5RtngHv0FtGqSsAxl35OZjl63jh3yXu3rV5cwAEbEYpla32q7i4_uk4Ksyni0Fa8MDBjhKUxdAp4_4hcSMKiF1x72RsmObH1bV9wuWfnaSBc2WyFSuWrSGruiSxzYJXo9G_pIwnDLwKtNFCX2GjXYDe_GQuCcl6Qe8ojZ5Y5UDlNVZSJ8RJ8"
+                  />
+                  <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
+                    <span className="material-symbols-outlined text-white text-[18px]">
+                      swords
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent-amber text-[10px]">
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                      <span className="material-symbols-outlined text-[12px] fill-current">
+                        star
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      #MO08
+                    </span>
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
+                    Mountain
+                  </h3>
+                  <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
+                    <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex justify-center items-center mt-8 py-6 gap-4 border-t border-white/5 relative">
+              <div className="absolute left-0 bottom-0 text-[10px] font-mono text-slate-600">
+                RHODES_ISLAND_PHARMACEUTICALS
+              </div>
+              <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-white hover:bg-primary hover:border-primary transition-colors">
+                <span className="material-symbols-outlined">chevron_left</span>
+              </button>
+              <div className="flex gap-2">
+                <button className="size-10 flex items-center justify-center rounded bg-primary text-background-dark font-bold shadow-lg shadow-primary/20">
+                  1
+                </button>
+                <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-colors">
+                  2
+                </button>
+                <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-colors">
+                  3
+                </button>
+                <span className="size-10 flex items-center justify-center text-slate-600">
+                  ...
+                </span>
+                <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-colors">
+                  12
+                </button>
+              </div>
+              <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-white hover:bg-primary hover:border-primary transition-colors">
+                <span className="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </main>
+        
+        <div className="hidden 2xl:flex fixed right-8 top-1/2 -translate-y-1/2 flex-col gap-8 items-center pointer-events-none">
+          <div className="w-[1px] h-32 bg-gradient-to-b from-transparent via-primary/50 to-transparent" />
+          <div className="text-[10px] font-mono text-primary/40 vertical-rl tracking-widest writing-mode-vertical-rl rotate-180">
+            SECURE_CONNECTION // ENCRYPTED
+          </div>
+          <div className="w-[1px] h-32 bg-gradient-to-b from-transparent via-primary/50 to-transparent" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+
+    </>
   );
 }
