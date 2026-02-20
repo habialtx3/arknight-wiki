@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import UserNavbar from "@/components/UserNavbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,8 +37,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${spaceGrotesk.variable} antialiased`}
+        className={`${spaceGrotesk.variable} bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased flex flex-col overflow-x-hidden relative`}
       >
+        <UserNavbar/>
         {children}
       </body>
     </html>

@@ -3,8 +3,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col overflow-x-hidden relative">
-        
         <div className="fixed inset-0 z-0 bg-hex-pattern pointer-events-none opacity-50" />
         <div className="fixed inset-0 z-0 scanlines-overlay bg-scanlines opacity-10 pointer-events-none" />
         
@@ -13,68 +11,10 @@ export default function Home() {
         <div className="fixed bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-primary z-50 pointer-events-none" />
         <div className="fixed bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-primary z-50 pointer-events-none" />
         
-        <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-surface-dark/80 border-b border-white/5">
-          <div className="flex items-center justify-between px-6 py-3 max-w-[1600px] mx-auto">
-            
-            <div className="flex items-center gap-4">
-              <div className="size-8 text-primary animate-pulse">
-                <span className="material-symbols-outlined text-[32px]">hub</span>
-              </div>
-              <div>
-                <h2 className="text-white text-lg font-bold leading-tight tracking-[0.1em]">
-                  RHODES ARCHIVE
-                </h2>
-                <p className="text-[10px] text-primary/60 font-mono tracking-widest">
-                  TERMINAL_01 // CONNECTED
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-6">
-              
-              <div className="hidden md:flex gap-4">
-                <div className="flex items-center gap-2 px-3 py-1 rounded bg-surface-darker border border-white/5">
-                  <span className="material-symbols-outlined text-accent-lime text-[16px]">
-                    bolt
-                  </span>
-                  <span className="text-xs font-bold text-white tracking-widest">
-                    135/135
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 px-3 py-1 rounded bg-surface-darker border border-white/5">
-                  <span className="material-symbols-outlined text-accent-amber text-[16px]">
-                    monetization_on
-                  </span>
-                  <span className="text-xs font-bold text-white tracking-widest">
-                    540,200
-                  </span>
-                </div>
-              </div>
-              
-              <div className="flex gap-2">
-                <button className="flex items-center justify-center size-9 rounded hover:bg-white/10 text-white transition-colors group relative">
-                  <span className="material-symbols-outlined">notifications</span>
-                  <span className="absolute top-2 right-2 size-2 bg-accent-amber rounded-full animate-ping" />
-                  <span className="absolute top-2 right-2 size-2 bg-accent-amber rounded-full" />
-                </button>
-                <button className="flex items-center justify-center size-9 rounded hover:bg-white/10 text-white transition-colors">
-                  <span className="material-symbols-outlined">settings</span>
-                </button>
-                <div className="ml-2 size-9 rounded overflow-hidden border border-white/10">
-                  <img
-                    alt="User avatar profile picture"
-                    className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC654MgGK0G609g7g2NyQ_eKVdVWMrGrFVdCEYcjkSkD2jQ3YMtmyJTXYLO5pFihCpX5cEH4SqT935EsloUWd1AtUOS0lHg4To7XSGs0TQnj0TkAEBaADKiVRz7AiiZk8US713ZpjXET_Vgz-unOpPiDZf2Zq78yVe8nq7r5uYtKqG_MZ1dur7JSSAsyPgk4FpQdzTdUeUTxT2WuvyBp4EBc-JLAbXH7W7yBF5DF79bUfJ1a-9vUlMHHzQUOSp5ygylOtcjqH8i6Yk"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+        
         
         <main className="flex-1 flex justify-center w-full z-10 px-4 py-8">
           <div className="w-full max-w-[1400px] flex flex-col gap-6">
-            
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-l-4 border-primary pl-4 py-1">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight glitch-text cursor-default">
@@ -733,8 +673,7 @@ export default function Home() {
           </div>
           <div className="w-[1px] h-32 bg-gradient-to-b from-transparent via-primary/50 to-transparent" />
         </div>
-      </div>
-
+      
     </>
   );
 }
