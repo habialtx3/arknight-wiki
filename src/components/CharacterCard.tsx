@@ -9,7 +9,7 @@ export default function CharacterCard() {
                     <div className="absolute inset-0 bg-primary mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
                     <img
                         alt="Portrait of a male operator with stern expression"
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                        className="w-200 h-200 -translate-y-20  object-cover object-[100%_60%] overflow-hidden object-top transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
                         src="/assets/character/amiya.webp"
                     />
 
