@@ -1,8 +1,30 @@
+'use client'
+
 import CharacterCard from "@/components/CharacterCard";
 import { characters } from "@/data/character";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [search, setSeacrh] = useState('')
+  const [debounceSearch, setDebounceSearch] = useState('')
+  
+  const filteredCharacters = characters.filter((char) =>
+    char.name.toLowerCase().includes(debounceSearch.toLowerCase()) ||
+    char.code.toLowerCase().includes(debounceSearch.toLowerCase()
+    )
+  )
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebounceSearch(search)
+    }, 400);
+
+    return () => {
+      clearTimeout(handler)
+    }
+  }, [search])
+
   return (
     <>
       <div className="fixed inset-0 z-0 bg-hex-pattern pointer-events-none opacity-50" />
@@ -45,6 +67,8 @@ export default function Home() {
                   className="w-full h-14 bg-surface-darker text-white pl-12 pr-4 border-none focus:ring-1 focus:ring-primary placeholder:text-slate-600 font-mono text-sm transition-all"
                   placeholder="SEARCH DATABASE [CODENAME_OR_ID]..."
                   type="text"
+                  value={search}
+                  onChange={(e) => setSeacrh(e.target.value)}
                 />
                 <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-focus-within/search:w-full transition-all duration-500"></div>
               </div>
@@ -148,10 +172,15 @@ export default function Home() {
           </section>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {characters.map((char) => (
+            {filteredCharacters.map((char) => (
               <CharacterCard key={char.id} character={char} />
             ))}
           </div>
+          {filteredCharacters.length === 0 && (
+            <div className="col-span-full text-center text-slate-500 font-mono py-10">
+              NO OPERATOR FOUND
+            </div>
+          )}
         </div>
       </main>
 
