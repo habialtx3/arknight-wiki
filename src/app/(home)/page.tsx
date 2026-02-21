@@ -8,7 +8,7 @@ export default function Home() {
 
   const [search, setSeacrh] = useState('')
   const [debounceSearch, setDebounceSearch] = useState('')
-  
+
   const filteredCharacters = characters.filter((char) =>
     char.name.toLowerCase().includes(debounceSearch.toLowerCase()) ||
     char.code.toLowerCase().includes(debounceSearch.toLowerCase()
@@ -181,6 +181,35 @@ export default function Home() {
               NO OPERATOR FOUND
             </div>
           )}
+
+          <div className="flex justify-center items-center mt-8 py-6 gap-4 border-t border-white/5 relative">
+            <div className="absolute left-0 bottom-0 text-[10px] font-mono text-slate-600">
+              RHODES_ISLAND_PHARMACEUTICALS
+            </div>
+            <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-white hover:bg-primary hover:border-primary transition-colors">
+              <span className="material-symbols-outlined">chevron_left</span>
+            </button>
+            <div className="flex gap-2">
+              <button className="size-10 flex items-center justify-center rounded bg-primary text-background-dark font-bold shadow-lg shadow-primary/20">
+                1
+              </button>
+              <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-colors">
+                2
+              </button>
+              <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-colors">
+                3
+              </button>
+              <span className="size-10 flex items-center justify-center text-slate-600">
+                ...
+              </span>
+              <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-colors">
+                12
+              </button>
+            </div>
+            <button className="size-10 flex items-center justify-center rounded bg-surface-dark border border-white/10 text-white hover:bg-primary hover:border-primary transition-colors">
+              <span className="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
         </div>
       </main>
 
