@@ -1,4 +1,5 @@
 import CharacterCard from "@/components/CharacterCard";
+import { characters } from "@/data/character";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,7 +12,6 @@ export default function Home() {
       <div className="fixed top-0 right-0 w-8 h-8 border-r-2 border-t-2 border-primary z-50 pointer-events-none" />
       <div className="fixed bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-primary z-50 pointer-events-none" />
       <div className="fixed bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-primary z-50 pointer-events-none" />
-
 
 
       <main className="flex-1 flex justify-center w-full z-10 px-4 py-8">
@@ -148,11 +148,9 @@ export default function Home() {
           </section>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            
+            {characters.map((char) => (
+              <CharacterCard key={char.id} character={char} />
+            ))}
           </div>
         </div>
       </main>

@@ -1,6 +1,11 @@
+import { CharacterProps } from '@/types/character'
 import React from 'react'
 
-export default function CharacterCard() {
+type Props = {
+    character: CharacterProps
+}
+
+export default function CharacterCard({ character }: Props) {
     return (
         <>
             <div className="group relative bg-surface-dark border border-white/5 hover:border-accent-lime/50 transition-all duration-300 rounded overflow-hidden cursor-pointer hover:shadow-[0_0_20px_rgba(163,230,53,0.15)] clip-corner">
@@ -9,8 +14,8 @@ export default function CharacterCard() {
                     <div className="absolute inset-0 bg-primary mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
                     <img
                         alt="Portrait of a male operator with stern expression"
-                        className="w-200 h-200 -translate-y-20  object-cover object-[100%_60%] overflow-hidden object-top transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
-                        src="/assets/character/amiya.webp"
+                        className="w-200 h-200 -translate-y-10  object-cover object-[100%_60%] overflow-hidden object-top transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                        src={character.picture}
                     />
 
                     <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-sm p-1 rounded border border-white/10">
@@ -23,31 +28,18 @@ export default function CharacterCard() {
                 <div className="absolute bottom-0 left-0 w-full p-3 z-20 flex flex-col gap-1">
                     <div className="flex items-center justify-between">
                         <div className="flex gap-0.5 text-accent-amber text-[10px]">
-                            <span className="material-symbols-outlined text-[12px] fill-current">
-                                star
-                            </span>
-                            <span className="material-symbols-outlined text-[12px] fill-current">
-                                star
-                            </span>
-                            <span className="material-symbols-outlined text-[12px] fill-current">
-                                star
-                            </span>
-                            <span className="material-symbols-outlined text-[12px] fill-current">
-                                star
-                            </span>
-                            <span className="material-symbols-outlined text-[12px] fill-current">
-                                star
-                            </span>
-                            <span className="material-symbols-outlined text-[12px] fill-current">
-                                star
-                            </span>
+                            {Array.from({ length: character.rarity }).map((_, i) => (
+                                <span key={i} className="material-symbols-outlined text-[12px] fill-current">
+                                    star
+                                </span>
+                            ))}
                         </div>
                         <span className="text-[10px] font-mono text-slate-400">
-                            #SA01
+                            {character.code}
                         </span>
                     </div>
                     <h3 className="text-white font-bold text-lg leading-tight uppercase tracking-wide group-hover:text-accent-lime transition-colors">
-                        AMIYA
+                        {character.name}
                     </h3>
                     <div className="w-full h-[2px] bg-white/20 mt-1 overflow-hidden">
                         <div className="h-full bg-accent-lime w-0 group-hover:w-full transition-all duration-500 ease-out" />
